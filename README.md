@@ -1,6 +1,6 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Développer des macros en Rust
 
-[Edit on StackBlitz ⚡️](https://sli.dev/new)
+Powered by [Slidev](https://github.com/slidevjs/slidev)!
 
 To start the slide show:
 
