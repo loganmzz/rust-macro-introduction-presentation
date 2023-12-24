@@ -90,5 +90,14 @@ macro_rules! hello {
 * `TokenStream` : Découpage en flux de tokens
 * `TokenTree`: Organisation des tokens en arbre
 
-
 ---
+
+# Live-code
+
+* Cargo init (`proc-macro`, `syn`, `quote`)
+* Blueprint (TDD)
+* Arrange / Act / Assert
+* Blueprint -> Test
+* main entrypoint `builder_macro_derive` +  `syn::parse_macro_input!()` + secondary entrypoint
+* tests + `parse_quote!()`
+* model + generator
