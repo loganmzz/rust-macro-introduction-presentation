@@ -1,44 +1,16 @@
 ---
-# try also 'default' to start simple
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
-highlighter: shiki
-# show line numbers in code blocks
-lineNumbers: false
-# some information about the slides, markdown enabled
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
-drawings:
-  persist: false
-# use UnoCSS (experimental)
+  Présentation concernant le développement de macros en Rust
+  Voir https://github.com/loganmzz/rust-macro-introduction-presentation
+theme: default
+highlighter: shiki
+lineNumbers: false
 css: unocss
 ---
 
 # Développer des macros en Rust
 
-Logan MAUZAIZE
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
-
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
 ---
@@ -47,23 +19,53 @@ The last comment block of each slide will be treated as slide notes. It will be 
 MonkeyPatch
 
 ---
+layout: section
+---
 
-# Rust
+# 101 Macro
+
+---
+
+# 101 Macro - Rust
 <br>
 
 * Compilation native
 * Ownership / Borrowing
 * Sureté mémoire et concurrence
 * Macro
+* ...
 
 ---
 
-# Macro
+# 101 Macro - Principes
 <br>
 
-* `FnOnce(TokenStream)->TokenStream`
+```rust
+FnOnce(TokenStream) -> TokenStream
+```
 
-* Macros _déclaratives_ (Macro par l'exemple)
+* Fonctions
+
+```rust
+my_macro!(...)
+```
+
+* Dérivées
+
+```rust
+#[derive(MyMacro)]
+```
+
+ * Attributs
+
+```rust
+#[MyMacro]
+```
+
+---
+
+# 101 Macro - Déclaratives
+_ou Macro par l'exemple_
 
 ```rust
 macro_rules! hello {
@@ -74,21 +76,50 @@ macro_rules! hello {
         hello!("world");
     };
 }
+
+hello!(); // Print "Hello world"
+hello!("you"); // Print "Hello you"
 ```
 
-* Macros _procédurales_
-
-  * Fonctions : `my_macro!(...)`
-  * Dérivées : `#[derive(MyMacro)]`
-  * Attributs : `#[MyMacro]`
+<!--
+  * Pattern matching
+  * Fonction uniquement
+-->
 
 ---
 
-# 101 Théorie des compilateurs
+# 101 Macro - Procédurales
 <br>
+
+```rust
+/// Fonction
+#[proc_macro]
+pub fn hello(tokens: TokenStream) -> TokenStream { ... }
+
+/// Dérivée
+#[proc_macro_derive(Hello)]
+pub fn derive_hello(tokens: TokenStream) -> TokenStream { ...  }
+
+/// Attribut
+#[proc_macro_attribute]
+pub fn helloize(attr: TokenStream, tokens: TokenStream) -> TokenStream { ... }
+
+```
+
+---
+layout: section
+---
+
+# 101 Théorie des compilateurs
 
 * `TokenStream` : Découpage en flux de tokens
 * `TokenTree`: Organisation des tokens en arbre
+
+---
+
+# 101 Compilateur - tokenisation
+<br>
+
 
 ---
 
