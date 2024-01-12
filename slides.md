@@ -25,6 +25,8 @@ layout: section
 # 101 Macro
 
 ---
+layout: two-cols
+---
 
 # 101 Macro - Rust
 <br>
@@ -34,6 +36,33 @@ layout: section
 * Sureté mémoire et concurrence
 * Macro
 * ...
+
+::right::
+
+```rust
+let (senderA, receiver) = sync_channel(1);
+
+let senderB = senderA.clone();
+thread::spawn(move|| {
+    for i in 0..3 {
+        thread::sleep(Duration::from_millis(10));
+        senderB.send("Pong !").unwrap();
+    }
+});
+
+thread::spawn(move|| {
+    for i in 0..3 {
+        senderA.send("Ping !").unwrap();
+        thread::sleep(Duration::from_millis(10));
+    }
+});
+
+
+while let Ok(value) = receiver.recv() {
+    println!("{}", value);
+}
+println!("Complete");
+```
 
 ---
 
@@ -112,14 +141,130 @@ layout: section
 
 # 101 Théorie des compilateurs
 
-* `TokenStream` : Découpage en flux de tokens
-* `TokenTree`: Organisation des tokens en arbre
+---
+
+# 101 Compilateur - Texte
+<br>
+
+<Tokens>
+  <Token type="Ident">pub</Token>
+  <Token type="Ident">fn</Token>
+  <Token type="Ident">hello</Token>
+  <Token type="Group">
+    <Token type="Delimiter">(</Token>
+    <Token type="Ident">name</Token>
+    <Token type="Punct">:</Token>
+    <Token type="Ident">Option</Token>
+    <Token type="Punct">&lt;</Token>
+    <Token type="Ident">String</Token>
+    <Token type="Punct">&gt;</Token>
+    <Token type="Delimiter">)</Token>
+  </Token>
+  <Token type="Group">
+    <Token type="Delimiter">{</Token>
+    <Token type="Delimiter">}</Token>
+  </Token>
+</Tokens>
 
 ---
 
-# 101 Compilateur - tokenisation
+# 101 Compilateur - Découpage
 <br>
 
+<Tokens format="cut">
+  <Token type="Ident">pub</Token>
+  <Token type="Ident">fn</Token>
+  <Token type="Ident">hello</Token>
+  <Token type="Group">
+    <Token type="Delimiter">(</Token>
+    <Token type="Ident">name</Token>
+    <Token type="Punct">:</Token>
+    <Token type="Ident">Option</Token>
+    <Token type="Punct">&lt;</Token>
+    <Token type="Ident">String</Token>
+    <Token type="Punct">&gt;</Token>
+    <Token type="Delimiter">)</Token>
+  </Token>
+  <Token type="Group">
+    <Token type="Delimiter">{</Token>
+    <Token type="Delimiter">}</Token>
+  </Token>
+</Tokens>
+
+---
+
+# 101 Compilateur - Tokenisation
+<br>
+
+<Tokens format="decorate">
+  <Token type="Ident">pub</Token>
+  <Token type="Ident">fn</Token>
+  <Token type="Ident">hello</Token>
+  <Token type="Group">
+    <Token type="Delimiter">(</Token>
+    <Token type="Ident">name</Token>
+    <Token type="Punct">:</Token>
+    <Token type="Ident">Option</Token>
+    <Token type="Punct">&lt;</Token>
+    <Token type="Ident">String</Token>
+    <Token type="Punct">&gt;</Token>
+    <Token type="Delimiter">)</Token>
+  </Token>
+  <Token type="Group">
+    <Token type="Delimiter">{</Token>
+    <Token type="Delimiter">}</Token>
+  </Token>
+</Tokens>
+
+<div class="legend">
+    <div>Legend:</div>
+    <Tokens format="decorate">
+      <Token type="Ident">Ident</Token>
+      <Token type="Delimiter">Delimiter</Token>
+      <Token type="Punct">Punct</Token>
+      <Token type="Group">Group</Token>
+    </Tokens>
+</div>
+
+---
+
+# 101 Compilateur - AST
+<br>
+
+<Tokens>
+  <Token type="Ident">pub</Token>
+  <Token type="Ident">fn</Token>
+  <Token type="Ident">hello</Token>
+  <Token type="Group">
+    <Token type="Delimiter">(</Token>
+    <Token type="Ident">name</Token>
+    <Token type="Punct">:</Token>
+    <Token type="Ident">Option</Token>
+    <Token type="Punct">&lt;</Token>
+    <Token type="Ident">String</Token>
+    <Token type="Punct">&gt;</Token>
+    <Token type="Delimiter">)</Token>
+  </Token>
+  <Token type="Group">
+    <Token type="Delimiter">{</Token>
+    <Token type="Delimiter">}</Token>
+  </Token>
+</Tokens>
+
+```yaml
+- kind: "function"
+  visibility: "pub"
+  signature:
+    name: "hello"
+    arguments:
+    - name: "name"
+      type:
+        name: "Option"
+        arguments:
+        - name: String
+    return: null
+  block: []
+```
 
 ---
 

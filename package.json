@@ -8,6 +8,7 @@
   "dependencies": {
     "@slidev/cli": "latest",
     "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest"
+    "@slidev/theme-seriph": "latest",
+    "sass": "^1.69.7"
   }
 }

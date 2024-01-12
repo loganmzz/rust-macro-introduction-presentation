@@ -1,0 +1,14 @@
+div.legend {
+    margin-top: 1rem;
+}
+
+.legend .Tokens {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.legend .Tokens .Token {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
