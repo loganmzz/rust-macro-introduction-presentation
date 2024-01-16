@@ -1,3 +1,13 @@
+.slidev-layout {
+    background-image: url(/img/background.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+#slide-content > footer {
+    z-index: 200;
+}
+
 div.legend {
     margin-top: 1rem;
 }

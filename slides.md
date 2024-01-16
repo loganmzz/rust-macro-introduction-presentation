@@ -270,6 +270,7 @@ layout: section
 
 # Live-code
 
+* https://doc.rust-lang.org/stable/reference/
 * Cargo init (`proc-macro`, `syn`, `quote`)
 * Blueprint (TDD)
 * Arrange / Act / Assert
