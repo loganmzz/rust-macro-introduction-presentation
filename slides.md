@@ -10,6 +10,8 @@ css: unocss
 
 # Développer des macros en Rust
 
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-presentation"/>
+
 <!--
 -->
 
@@ -271,6 +273,7 @@ layout: section
 # Live-code
 
 * https://doc.rust-lang.org/stable/reference/
+* https://developerlife.com/2022/03/30/rust-proc-macro/
 * Cargo init (`proc-macro`, `syn`, `quote`)
 * Blueprint (TDD)
 * Arrange / Act / Assert

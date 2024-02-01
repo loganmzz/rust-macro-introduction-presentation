@@ -9,6 +9,7 @@
     "@slidev/cli": "latest",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "qrcode": "1.5.3",
     "sass": "^1.69.7"
   }
 }
