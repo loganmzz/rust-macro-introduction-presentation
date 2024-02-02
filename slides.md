@@ -39,22 +39,24 @@ layout: two-cols
 * Macro
 * ...
 
+<QRLink url="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=8d04a7c5d467aa3f88ea450d741cc4aa"/>
+
 ::right::
 
 ```rust
-let (senderA, receiver) = sync_channel(1);
+let (ping, receiver) = sync_channel(1);
 
-let senderB = senderA.clone();
+let pong = ping.clone();
 thread::spawn(move|| {
     for i in 0..3 {
         thread::sleep(Duration::from_millis(10));
-        senderB.send("Pong !").unwrap();
+        pong.send("Pong !").unwrap();
     }
 });
 
 thread::spawn(move|| {
     for i in 0..3 {
-        senderA.send("Ping !").unwrap();
+        ping.send("Ping !").unwrap();
         thread::sleep(Duration::from_millis(10));
     }
 });
