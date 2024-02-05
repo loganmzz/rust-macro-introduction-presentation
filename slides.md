@@ -276,11 +276,10 @@ layout: section
 
 # Demo
 
-<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code"/>
-
 <!--
 * https://doc.rust-lang.org/stable/reference/
 * https://developerlife.com/2022/03/30/rust-proc-macro/
+* Data : Default + Debug + getter (String, usize, bool)
 * Cargo init (`proc-macro`, `syn`, `quote`)
 * Blueprint (TDD)
 * Arrange / Act / Assert
@@ -292,6 +291,22 @@ layout: section
 
 ---
 
+# Demo
+
+* Derive Data
+* Impl `Default` + `Debug` + getters
+* Type `String` + `usize` + `bool`
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code"/>
+
+---
+
 # Demo - 00 - Initialisation
 
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/00-init"/>
+
+---
+
+# Demo - 01 - Blueprint
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/01-blueprint"/>
