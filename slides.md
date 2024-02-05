@@ -271,9 +271,14 @@ layout: section
 ```
 
 ---
+layout: section
+---
 
-# Live-code
+# Demo
 
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code"/>
+
+<!--
 * https://doc.rust-lang.org/stable/reference/
 * https://developerlife.com/2022/03/30/rust-proc-macro/
 * Cargo init (`proc-macro`, `syn`, `quote`)
@@ -283,3 +288,10 @@ layout: section
 * main entrypoint `builder_macro_derive` +  `syn::parse_macro_input!()` + secondary entrypoint
 * tests + `parse_quote!()`
 * model + generator
+-->
+
+---
+
+# Demo - 00 - Initialisation
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/00-init"/>
