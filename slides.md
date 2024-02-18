@@ -303,10 +303,37 @@ layout: section
 
 # Demo - 00 - Initialisation
 
+* `cargo init`
+* `proc-macro2`, `quote`, `syn`
+
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/00-init"/>
 
 ---
 
 # Demo - 01 - Blueprint
 
+* `impl ::std::default::Default`
+
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/01-blueprint"/>
+
+---
+
+# Demo - 02 - impl `Default`
+
+* `quote::quote!`
+* `syn::Fields::Named`, `syn::Fields::Unnamed`
+* `proc_macro2::Group`
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/02-impl-default"/>
+
+---
+
+# Demo - 03 - Modules
+
+```rust
+mod model;
+mod parser;
+mod generator;
+```
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/03-modules"/>
