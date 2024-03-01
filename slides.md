@@ -337,3 +337,12 @@ mod generator;
 ```
 
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/03-modules"/>
+
+# Demo - 04 - Debug
+
+* `impl ::std::fmt::Debug`
+* `debug_struct()`, `debug_tuple()`
+* `proc_macro2::Literal`
+* `quote::format_ident`
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/04-debug"/>
