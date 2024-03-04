@@ -338,6 +338,8 @@ mod generator;
 
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/03-modules"/>
 
+---
+
 # Demo - 04 - Debug
 
 * `impl ::std::fmt::Debug`
@@ -346,3 +348,23 @@ mod generator;
 * `quote::format_ident`
 
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/04-debug"/>
+
+---
+layout: section
+---
+
+# Pour aller plus loin
+
+---
+
+# Pour aller plus loin - Liens
+
+https://doc.rust-lang.org/book/ch19-06-macros.html
+
+https://ferrous-systems.com/blog/testing-proc-macros/
+
+https://github.com/dtolnay/proc-macro-workshop
+
+https://github.com/dtolnay/case-studies/tree/master
+
+https://developerlife.com/2022/03/30/rust-proc-macro/
