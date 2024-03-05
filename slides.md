@@ -353,6 +353,8 @@ mod generator;
 
 # Demo - 05 - Attribut
 
+* `#[proc_macro_derive(attributes(...))]`
+* `Attribute::parse_nested_meta`
 * [`darling`](https://crates.io/crates/darling)
 
 
