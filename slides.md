@@ -350,6 +350,15 @@ mod generator;
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/04-debug"/>
 
 ---
+
+# Demo - 05 - Attribut
+
+* [`darling`](https://crates.io/crates/darling)
+
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/05-attribute"/>
+
+---
 layout: section
 ---
 
