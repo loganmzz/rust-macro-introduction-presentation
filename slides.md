@@ -361,6 +361,13 @@ mod generator;
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/05-attribute"/>
 
 ---
+
+# Demo - 06 - Gestion des erreurs
+
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/06-errors"/>
+
+---
 layout: section
 ---
 
