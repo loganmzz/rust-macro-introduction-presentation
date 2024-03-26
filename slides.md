@@ -12,13 +12,33 @@ css: unocss
 
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-presentation"/>
 
-<!--
--->
-
 ---
 
 # Logan MAUZAIZE
-MonkeyPatch
+MonkeyPatch - Expert DevOps
+
+<Logos>
+  <Logo name="terraform"/>
+  <Logo name="kubernetes"/>
+  <Logo name="ansible"/>
+</Logos>
+
+<QRLink url="https://www.monkeypatch.io/"/>
+
+---
+layout: two-cols-header
+---
+
+# Logan MAUZAIZE
+Auteur de Macon
+
+::left::
+
+<Logo name="macon"/>
+
+::right::
+
+<QRLink url="https://www.monkeypatch.io/blog/2024-02-06-rust-macon-new-derive-builder"/>
 
 ---
 layout: section
@@ -276,19 +296,6 @@ layout: section
 
 # Demo
 
-<!--
-* https://doc.rust-lang.org/stable/reference/
-* https://developerlife.com/2022/03/30/rust-proc-macro/
-* Data : Default + Debug + getter (String, usize, bool)
-* Cargo init (`proc-macro`, `syn`, `quote`)
-* Blueprint (TDD)
-* Arrange / Act / Assert
-* Blueprint -> Test
-* main entrypoint `builder_macro_derive` +  `syn::parse_macro_input!()` + secondary entrypoint
-* tests + `parse_quote!()`
-* model + generator
--->
-
 ---
 
 # Demo
@@ -340,7 +347,7 @@ mod generator;
 
 ---
 
-# Demo - 04 - Debug
+# Demo - 04 - impl `Debug`
 
 * `impl ::std::fmt::Debug`
 * `debug_struct()`, `debug_tuple()`
@@ -364,6 +371,9 @@ mod generator;
 
 # Demo - 06 - Gestion des erreurs
 
+* `syn::Result`
+* `syn::Error::into_compile_error`
+
 
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/06-errors"/>
 
@@ -372,6 +382,17 @@ layout: section
 ---
 
 # Pour aller plus loin
+
+---
+
+# Pour aller plus loin - Bilan de la démo
+
+* ⚠️ NE PAS FAIRE les étapes une à une
+* 😄 A FAIRE implémenter les getters
+* 🚑 A CREUSER l'assainissement (visibilité, features, ...)
+* 🕵️ A ÉTUDIER parser des struct via `syn::parse`
+* 📄 IDÉES gérer des fichiers de configuration (DRY)
+* 🧪 TESTER ! TESTER ! TESTER !
 
 ---
 
@@ -386,3 +407,17 @@ https://github.com/dtolnay/proc-macro-workshop
 https://github.com/dtolnay/case-studies/tree/master
 
 https://developerlife.com/2022/03/30/rust-proc-macro/
+
+---
+layout: two-cols-header
+---
+
+# Questions ?
+
+::left::
+
+![Do you have questions?](/img/question.gif)
+
+::right::
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-presentation"/>
