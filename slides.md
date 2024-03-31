@@ -13,15 +13,23 @@ css: unocss
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-presentation"/>
 
 ---
+layout: two-cols-header
+---
 
 # Logan MAUZAIZE
 MonkeyPatch - Expert DevOps
 
-<Logos>
+<Logos style="height: 3em;">
   <Logo name="terraform"/>
   <Logo name="kubernetes"/>
   <Logo name="ansible"/>
 </Logos>
+
+::left::
+
+<Logo style="height: 70%; background-color: rgba(255, 255, 255, .30);" name="monkeypatch"/>
+
+::right::
 
 <QRLink url="https://www.monkeypatch.io/"/>
 
@@ -391,6 +399,7 @@ layout: section
 * 😄 A FAIRE implémenter les getters
 * 🚑 A CREUSER l'assainissement (visibilité, features, ...)
 * 🕵️ A ÉTUDIER parser des struct via `syn::parse`
+* 📖 A CONSIDÉRER exporter des APIs (struct, trait, ...)
 * 📄 IDÉES gérer des fichiers de configuration (DRY)
 * 🧪 TESTER ! TESTER ! TESTER !
 
