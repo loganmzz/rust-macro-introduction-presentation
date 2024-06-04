@@ -17,21 +17,22 @@ layout: two-cols-header
 ---
 
 # Logan MAUZAIZE
-MonkeyPatch - Expert DevOps
+Advae - DevOps Senior
 
 <Logos style="height: 3em;">
   <Logo name="terraform"/>
   <Logo name="kubernetes"/>
-  <Logo name="ansible"/>
+  <Logo name="helm"/>
+  <Logo name="argo-cd"/>
 </Logos>
 
 ::left::
 
-<Logo style="height: 70%; background-color: rgba(255, 255, 255, .30);" name="monkeypatch"/>
+<Logo style="height: 70%; background-color: rgba(255, 255, 255, .30);" name="advae"/>
 
 ::right::
 
-<QRLink url="https://www.monkeypatch.io/"/>
+<QRLink url="https://advae.com/"/>
 
 ---
 layout: two-cols-header
