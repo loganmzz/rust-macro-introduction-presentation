@@ -160,7 +160,7 @@ pub fn hello(tokens: TokenStream) -> TokenStream { ... }
 
 /// Dérivée
 #[proc_macro_derive(Hello)]
-pub fn derive_hello(tokens: TokenStream) -> TokenStream { ...  }
+pub fn derive_hello(tokens: TokenStream) -> TokenStream { ... }
 
 /// Attribut
 #[proc_macro_attribute]
