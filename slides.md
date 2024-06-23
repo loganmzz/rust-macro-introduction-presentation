@@ -324,6 +324,12 @@ layout: section
 
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/00-init"/>
 
+<!--
+* `proc-macro2`: testable, out of macro context
+* `syn`: parser, token -> syntax tree
+* `quote`: generator, syntax tree -> token
+-->
+
 ---
 
 # Demo - 01 - Blueprint
