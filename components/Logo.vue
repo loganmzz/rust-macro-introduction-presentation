@@ -12,7 +12,7 @@ const props = defineProps({
     name: String,
 });
 
-const imgSrc = computed(() => `/img/logos/${props.name}.png`);
+const imgSrc = computed(() => `img/logos/${props.name}.png`);
 </script>
 
 <template>
