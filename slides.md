@@ -393,6 +393,15 @@ mod generator;
 <QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/06-errors"/>
 
 ---
+
+# Demo - 07 - API publique
+
+* Cargo workspace
+
+
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/07-public-api"/>
+
+---
 layout: section
 ---
 
@@ -406,7 +415,6 @@ layout: section
 * 😄 A FAIRE implémenter les getters
 * 🚑 A CREUSER l'assainissement (visibilité, features, ...)
 * 🕵️ A ÉTUDIER parser des struct via `syn::parse`
-* 📖 A CONSIDÉRER exporter des APIs (struct, trait, ...)
 * 📄 IDÉES gérer des fichiers de configuration (DRY)
 * 🧪 TESTER ! TESTER ! TESTER !
 
