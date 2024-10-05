@@ -1,0 +1,21 @@
+{
+  "Cargo init": {
+    "prefix": "cargo init",
+    "body": [
+      "[lib]",
+      "proc-macro = true",
+      "",
+      "[dependencies]",
+      "proc-macro2 = \"1.0.73\"",
+      "quote = \"1.0.34\"",
+      "syn = \"2.0.44\"",
+      "",
+      "[features]",
+      "debug = [",
+      "  \"syn/extra-traits\",",
+      "]",
+      "",
+    ],
+    "scope": "toml",
+  }
+}
