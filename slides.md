@@ -369,7 +369,7 @@ mod generator;
 * `proc_macro2::Literal`
 * `quote::format_ident`
 
-<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/04-debug"/>
+<QRLink url="https://github.com/loganmzz/rust-macro-introduction-code/tree/04-impl-debug"/>
 
 ---
 
