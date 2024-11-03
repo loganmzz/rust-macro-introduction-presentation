@@ -1,6 +1,6 @@
 {
   "Cargo init": {
-    "prefix": "cargo init",
+    "prefix": "0 cargo init",
     "body": [
       "[lib]",
       "proc-macro = true",
