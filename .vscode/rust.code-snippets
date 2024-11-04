@@ -255,6 +255,10 @@
   "03d - derive": {
     "prefix": "3d derive",
     "body": [
+      "mod model;",
+      "mod parser;",
+      "mod generator;",
+      "",
       "fn data_macro_derive_impl(input: syn::DeriveInput) -> proc_macro2::TokenStream {",
       "    let data = parser::parse(input);",
       "    generator::generate(data)",
