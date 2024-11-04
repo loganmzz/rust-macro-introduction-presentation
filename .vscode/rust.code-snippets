@@ -382,7 +382,7 @@
       "        model::StructFormat::Named,",
       "        proc_macro2::Delimiter::None,",
       "    ),",
-      "},",
+      "}",
     ],
     "scope": "rust",
   },
